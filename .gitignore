@@ -1,0 +1,49 @@
+# MedRoute AI — .gitignore
+
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# === IDE ===
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+*.swp
+*.swo
+*.bak
+*~
+
+# === Maven ===
+dependency-reduced-pom.xml
+
+# === Environment ===
+.env
+*.env
+!.env.example
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+*.log
+logs/
+
+# === Tomcat & Temporary Dirs ===
+apache-tomcat-*/
+catalina.out
+scratch/
+temp_extract/
+
+# === Scratch test scripts ===
+test.py
+test_api*.ps1
+scratch_*.ps1
+Task-Scheduler-and-Reminder-Application*.pptx
