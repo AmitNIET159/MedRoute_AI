@@ -1,0 +1,4 @@
+# MedRoute AI — Git Attributes
+# Force Unix line endings for shell scripts (critical for Docker)
+*.sh text eol=lf
+Dockerfile text eol=lf

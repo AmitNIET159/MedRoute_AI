@@ -12,7 +12,6 @@ public class AppConfig {
     @Bean
     public Dotenv dotenv() {
         return Dotenv.configure()
-                .directory("c:/project/MedRoute_AI")
                 .ignoreIfMissing()
                 .load();
     }

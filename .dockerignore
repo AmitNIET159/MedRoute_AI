@@ -1,0 +1,43 @@
+# =====================================================
+# MedRoute AI — Docker Ignore
+# Keeps the Docker build context small and fast
+# =====================================================
+
+# Secrets — NEVER include in Docker image
+.env
+
+# Build artifacts (we rebuild inside Docker)
+target/
+*.war
+*.jar
+*.class
+
+# Local Tomcat instance
+apache-tomcat-*/
+
+# IDE and OS files
+.idea/
+.settings/
+.project
+.classpath
+*.iml
+.DS_Store
+Thumbs.db
+
+# Test & scratch scripts
+scratch/
+temp_extract/
+scratch_*.ps1
+test_*.ps1
+test.py
+runtest.bat
+logs/
+
+# Documentation & presentations (not needed at runtime)
+docs/
+*.pptx
+*.md
+
+# Git
+.git/
+.gitignore

@@ -31,11 +31,15 @@ public class DatabaseConfig {
         dataSource.setUsername(dotenv.get("DB_USERNAME"));
         dataSource.setPassword(dotenv.get("DB_PASSWORD"));
         
-        dataSource.setMaximumPoolSize(10);
-        dataSource.setMinimumIdle(5);
+        // Pool sizing — tuned for cloud free tier (512 MB RAM)
+        dataSource.setMaximumPoolSize(5);
+        dataSource.setMinimumIdle(2);
         dataSource.setIdleTimeout(300000);
         dataSource.setConnectionTimeout(20000);
         dataSource.setMaxLifetime(1200000);
+        
+        // Cloud DB resilience — validate connections before use
+        dataSource.setConnectionTestQuery("SELECT 1");
         
         return dataSource;
     }
